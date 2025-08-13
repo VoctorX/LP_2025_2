@@ -1,10 +1,16 @@
-# ProyectosGit# Título del Proyecto
+# ProyectosGit
 
-_Acá va un párrafo que describa lo que es el proyecto_
+Repositorio de proyectos de programación 2025
 
 ## Comenzando 🚀
 
 _Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
+
+
+📥 Clonar el repositorio
+```bash
+git clone https://github.com/Voctor69/ProyectosGit.git
+```
 
 Mira **Deployment** para conocer como desplegar el proyecto.
 
@@ -103,4 +109,4 @@ Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE.md
 
 
 ---
-⌨️ con ❤️ por [Villanuevand](https://github.com/Villanuevand) 😊
+⌨️ con ❤️ por [Victor](https://github.com/Voctor69) 😊
