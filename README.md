@@ -4,18 +4,14 @@ Repositorio de proyectos de programación 2025
 
 ## Comenzando 🚀
 
-_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
-
-Mira **Deployment** para conocer como desplegar el proyecto.
-
+Este repositorio contiene varios proyectos de programación realizados en 2025.  
+_Puedes obtener una copia en tu máquina local para revisarlos, modificarlos o ejecutarlos._
 
 ### Pre-requisitos 📋
 
-_Que cosas necesitas para instalar el software y como instalarlas_
-
-```
-Da un ejemplo
-```
+* Git instalado en tu equipo.
+* Un IDE, como ejemplo, Visual Studio Code.
+* Tener descargado y actualizado correctamente Java
 
 ### Instalación 🔧
 
@@ -61,23 +57,11 @@ _Agrega notas adicionales sobre como hacer deploy_
 
 ## Construido con 🛠️
 
-_Menciona las herramientas que utilizaste para crear tu proyecto_
+_Herramientas y tecnologías utilizadas en los proyectos de este repositorio:_
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - El framework web usado
-* [Maven](https://maven.apache.org/) - Manejador de dependencias
-* [ROME](https://rometools.github.io/rome/) - Usado para generar RSS
-
-## Contribuyendo 🖇️
-
-Por favor lee el [CONTRIBUTING.md](https://gist.github.com/villanuevand/xxxxxx) para detalles de nuestro código de conducta, y el proceso para enviarnos pull requests.
-
-## Wiki 📖
-
-Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra [Wiki](https://github.com/tu/proyecto/wiki)
-
-## Versionado 📌
-
-Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones disponibles, mira los [tags en este repositorio](https://github.com/tu/proyecto/tags).
+* [Git](https://git-scm.com/) - Control de versiones
+* [Visual Studio Code](https://code.visualstudio.com/) - Editor de código
+* [Python](https://www.python.org/) - Lenguaje de programación
 
 ## Autores ✒️
 
@@ -91,8 +75,7 @@ Este proyecto está bajo la Licencia MIT - mira el archivo [LICENSE.md](LICENSE.
 
 * Comenta a otros sobre este proyecto 📢
 * Da las gracias públicamente 🤓.
-* Dona con cripto a esta dirección: `0xf253fc233333078436d111175e5a76a649890000`
+* Dona con cripto a esta dirección: `0x95d80d2e959099458EDCfd3E14391A44F532177a`
 * Dona con Paypal: [![Donar con PayPal](https://img.shields.io/badge/Donar%20con-PayPal-00457C?logo=paypal&logoColor=white)](https://www.paypal.com/donate/?business=cordobavictorml@gmail.com&no_recurring=0&currency_code=USD) 
-
 
 ---
