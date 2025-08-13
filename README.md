@@ -1,16 +1,16 @@
 # ProyectosGit
 
-Repositorio de proyectos de programación 2025
+Repositorio de proyectos de programación 2025 
 
 ## Comenzando 🚀
 
-Este repositorio contiene varios proyectos de programación realizados en 2025.  
-_Puedes obtener una copia en tu máquina local para revisarlos, modificarlos o ejecutarlos._
+Este repositorio contiene varios proyectos de programación realizados en la clase de "Lenguajes de Programación" 2025-2.  
+_Puedes obtener una copia en tu computador personal para revisarlos, modificarlos o ejecutarlos._
 
 ### Pre-requisitos 📋
 
 * Git instalado en tu equipo.
-* Un IDE, como ejemplo, Visual Studio Code.
+* Un IDE de tu agrado, como ejemplo, Visual Studio Code.
 * Tener descargado y actualizado correctamente Python
 
 ### Instalación 🔧
@@ -25,7 +25,7 @@ _Puedes obtener una copia en tu máquina local para revisarlos, modificarlos o e
 
 ## Construido con 🛠️
 
-_Herramientas y tecnologías utilizadas en los proyectos de este repositorio:_
+_Herramientas y lenguajes utilizados en los proyectos de este repositorio:_
 
 * [Git](https://git-scm.com/) - Control de versiones
 * [Visual Studio Code](https://code.visualstudio.com/) - Editor de código
