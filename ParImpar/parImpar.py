@@ -6,4 +6,4 @@ while op==1:
     else:
         print(f"Su numero '{num}' es impar")
     op=int(input("¿Desea seguir con otro numero? (1.Si)(2.No): "))
-print("Gracias por usar el programa")    
+print("Gracias por usar el programa")
