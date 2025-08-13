@@ -11,49 +11,17 @@ _Puedes obtener una copia en tu máquina local para revisarlos, modificarlos o e
 
 * Git instalado en tu equipo.
 * Un IDE, como ejemplo, Visual Studio Code.
-* Tener descargado y actualizado correctamente Java
+* Tener descargado y actualizado correctamente Python
 
 ### Instalación 🔧
 
-_Una serie de ejemplos paso a paso que te dice lo que debes ejecutar para tener un entorno de desarrollo ejecutandose_
-
-_Dí cómo será ese paso_
-
-```
-Da un ejemplo
-```
-
-_Y repite_
-
-```
-hasta finalizar
-```
-
-_Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo_
-
-## Ejecutando las pruebas ⚙️
-
-_Explica como ejecutar las pruebas automatizadas para este sistema_
-
-### Analice las pruebas end-to-end 🔩
-
-_Explica que verifican estas pruebas y por qué_
-
-```
-Da un ejemplo
-```
-
-### Y las pruebas de estilo de codificación ⌨️
-
-_Explica que verifican estas pruebas y por qué_
-
-```
-Da un ejemplo
-```
-
-## Despliegue 📦
-
-_Agrega notas adicionales sobre como hacer deploy_
+1. Clona el repositorio:
+```bash
+   git clone https://github.com/Voctor69/ProyectosGit.git
+```   
+2. Abre la carpeta del repositorio en tu editor de código.
+3. Ingresa a la carpeta del proyecto que quieras ejecutar.
+4. Ábrelo y ejecútalo en el entorno correspondiente.
 
 ## Construido con 🛠️
 
@@ -63,7 +31,7 @@ _Herramientas y tecnologías utilizadas en los proyectos de este repositorio:_
 * [Visual Studio Code](https://code.visualstudio.com/) - Editor de código
 * [Python](https://www.python.org/) - Lenguaje de programación
 
-## Autores ✒️
+## Autor ✒️
 
 * **Victor Cordoba** - *Creador y desarrollador principal* - [Voctor69](https://github.com/Voctor69)
 
