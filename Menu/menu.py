@@ -45,8 +45,11 @@ while True:
 
     #OpcioN 4: Division
     elif op == '4':
-        resultado=num1/num2
-        print(f"La division de {num1} y {num2} es: {resultado}")
+        if num2==0:
+            print("Trata con otro numero")
+        else:    
+            resultado=num1/num2
+            print(f"La division de {num1} y {num2} es: {resultado}")
 
     #OpcioN 5: Salir
     elif op == '5':
