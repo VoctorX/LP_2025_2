@@ -33,7 +33,7 @@ _Herramientas y lenguajes utilizados en los proyectos de este repositorio:_
 
 ## Autor ✒️
 
-* **Victor Cordoba** - *Creador y desarrollador principal* - [Voctor69](https://github.com/Voctor69)
+* **Victor Cordoba** - *Creador y desarrollador principal* - [VoctorX](https://github.com/VoctorX)
 
 ## Licencia 📄
 
