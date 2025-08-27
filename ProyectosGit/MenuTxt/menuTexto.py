@@ -1,3 +1,16 @@
+# -*- coding: utf-8  -*-
+""""
+===============================================================
+|                 Text Changer- Menu                   |
+===============================================================
+
+Este programa es un cambiador de texto que permite modificar el formato del texto ingresado por el usuario.
+
+Autor: Victor Cordoba
+Fecha: 2025-08-25
+
+"""
+
 while True:
     texto=str(input("\nIngrese el texto que desea convertir: "))
 
