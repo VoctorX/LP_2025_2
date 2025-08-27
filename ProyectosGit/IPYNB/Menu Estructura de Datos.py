@@ -25,12 +25,17 @@ while True:
     op=input("Selecciones una de las opciones (1-5): ")
 
     # ====OPeraciones====
+    notas = []
 
     if op == "1": # Ejemplo con listas
         print("\nEjemplo con Listas")
-        notas = [8, 7, 9, 10]
-        print("Notas:", notas)
-        print("Promedio:", sum(notas) / len(notas))
+        n=int(input("¿Cuantas notas desea registrar?: "))
+        for i in range(n):
+            valor=float(input(f"Ingrese el monto de las nota {i+1}: "))
+            notas.append(valor)
+
+        print("Notas: ", notas)
+        print("Promedio: ", sum(notas) / len(notas))
         input("\nPresione Enter para continuar... ")
     
     elif op == "2": # Ejemplo con tuplas
