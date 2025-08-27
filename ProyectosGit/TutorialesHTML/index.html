@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Tutorial: Comandos básicos del Símbolo del Sistema (CMD)</title>
+    <style>
+        body {
+            font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+            line-height: 1.6;
+            padding: 24px;
+            max-width: 1000px;
+            margin: 0 auto;
+            color: #111
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            gap: 16px
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 1.8rem
+        }
+
+        .lead {
+            color: #444
+        }
+
+        pre {
+            background: #0f172a;
+            color: #e6eef8;
+            padding: 12px;
+            border-radius: 6px;
+            overflow: auto
+        }
+
+        code {
+            font-family: monospace
+        }
+
+        section {
+            margin-top: 20px;
+            padding: 18px;
+            border-radius: 10px;
+            background: #f7fafc
+        }
+
+        .cmd {
+            display: flex;
+            gap: 8px;
+            align-items: center
+        }
+
+        .example {
+            margin-top: 8px
+        }
+
+        .tip {
+            background: #fff7ed;
+            border-left: 4px solid #f59e0b;
+            padding: 10px;
+            border-radius: 6px;
+            margin-top: 8px
+        }
+
+        nav {
+            margin: 18px 0;
+            padding: 12px;
+            background: #eef2ff;
+            border-radius: 8px
+        }
+
+        ul {
+            margin: 0;
+            padding-left: 18px
+        }
+
+        .quiz-item {
+            margin-bottom: 12px
+        }
+
+        button.copy {
+            margin-left: auto;
+            background: #111827;
+            color: #fff;
+            border: none;
+            padding: 6px 10px;
+            border-radius: 6px;
+            cursor: pointer
+        }
+
+        .answer {
+            display: none;
+            margin-top: 6px;
+            padding: 8px;
+            background: #ecfeff;
+            border-left: 4px solid #06b6d4;
+            border-radius: 6px
+        }
+
+        footer {
+            margin-top: 26px;
+            color: #666;
+            font-size: 0.9rem
+        }
+
+        .small {
+            font-size: 0.9rem;
+            color: #555
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="24" height="24" rx="4" fill="#111827" />
+            <path d="M8 7h8v1H8zM8 10h8v1H8zM8 13h5v1H8z" fill="#fff" />
+        </svg>
+        <div>
+            <h1>Tutorial paso a paso: Comandos principales del Símbolo del Sistema (CMD)</h1>
+            <div class="lead">Guía práctica para crear archivos, navegar carpetas y usar comandos comunes — con ejemplos
+                y un quiz al final.</div>
+        </div>
+    </header>
+
+    <nav>
+        <strong>Contenido rápido</strong>
+        <ul>
+            <li>Cómo abrir CMD</li>
+            <li>Comandos de navegación: <code>dir</code>, <code>cd</code></li>
+            <li>Crear y borrar archivos/carpetas: <code>type nul</code>, <code>echo</code>, <code>del</code>,
+                <code>mkdir</code>, <code>rmdir</code></li>
+            <li>Copiar y mover: <code>copy</code>, <code>xcopy</code>, <code>robocopy</code>, <code>move</code></li>
+            <li>Información de red y sistema: <code>ipconfig</code>, <code>ping</code>, <code>tasklist</code>,
+                <code>systeminfo</code></li>
+            <li>Quiz (7 preguntas)</li>
+        </ul>
+    </nav>
+
+    <section>
+        <h2>1. Abrir el Símbolo del Sistema</h2>
+        <ol>
+            <li>Presiona <strong>Windows</strong> en tu teclado o abre el menú Inicio.</li>
+            <li>Escribe <code>cmd</code> o <code>Símbolo del sistema</code>.</li>
+            <li>Haz clic derecho → <em>Ejecutar como administrador</em> si necesitas privilegios elevados (para tareas
+                como <code>chkdsk</code>, <code>format</code>, etc.).</li>
+        </ol>
+        <div class="tip small">Consejo: también puedes usar <code>Win + R</code>, escribir <code>cmd</code> y presionar
+            Enter.</div>
+    </section>
+
+    <section>
+        <h2>2. Navegación básica</h2>
+        <p>Estos comandos te ayudan a moverte por el sistema de archivos.</p>
+
+        <h3><code>dir</code> — listar archivos y carpetas</h3>
+        <div class="cmd">
+            <pre><code>dir</code></pre>
+        </div>
+        <div class="example">Muestra todos los archivos y subcarpetas del directorio actual. Usa <code>dir /a</code>
+            para ver archivos ocultos y del sistema.</div>
+
+        <h3><code>cd</code> — cambiar de directorio</h3>
+        <div class="cmd">
+            <pre><code>cd \ruta\a\carpeta
+cd ..   &nbsp;  (subir una carpeta)
+cd /d D:\otra\carpeta  &nbsp; (cambiar de unidad y carpeta)</code></pre>
+        </div>
+        <div class="tip">Si solo escribes la letra de la unidad (<code>D:</code>) cambiarás a esa unidad sin cambiar la
+            carpeta actual en ella.</div>
+    </section>
+
+    <section>
+        <h2>3. Crear y editar archivos desde la consola</h2>
+
+        <h3><code>type nul &gt; archivo.txt</code> — crear archivo vacío</h3>
+        <div class="cmd">
+            <pre><code>type nul &gt; archivo.txt</code></pre>
+        </div>
+        <div class="example">Crea <code>archivo.txt</code> vacío en el directorio actual.</div>
+
+        <h3><code>echo</code> — crear archivo con contenido</h3>
+        <div class="cmd">
+            <pre><code>echo Hola mundo &gt; saludo.txt</code></pre>
+        </div>
+        <div class="example">Crea <code>saludo.txt</code> y escribe "Hola mundo". Usa <code>&gt;&gt;</code> para
+            <em>agregar</em> líneas sin sobrescribir.</div>
+
+        <h3><code>copy con</code> — escribir desde la consola</h3>
+        <div class="cmd">
+            <pre><code>copy con nota.txt
+(escribe texto aquí)
+Ctrl+Z + Enter  &nbsp; (guardar)</code></pre>
+        </div>
+        <div class="example">Abre un modo para teclear varias líneas; guarda con <code>Ctrl+Z</code>.</div>
+
+        <h3><code>notepad archivo.txt</code> — abrir en bloc de notas</h3>
+        <div class="cmd">
+            <pre><code>notepad archivo.txt</code></pre>
+        </div>
+        <div class="example">Si el archivo no existe, Notepad te preguntará para crearlo.</div>
+    </section>
+
+    <section>
+        <h2>4. Crear y eliminar carpetas y archivos</h2>
+        <h3><code>mkdir</code> (o <code>md</code>)</h3>
+        <div class="cmd">
+            <pre><code>mkdir nueva_carpeta
+md otra_carpeta</code></pre>
+        </div>
+
+        <h3><code>rmdir</code> (o <code>rd</code>) y <code>del</code></h3>
+        <div class="cmd">
+            <pre><code>rmdir nombre_carpeta         &nbsp; (solo si está vacía)
+rmdir /s nombre_carpeta      &nbsp; (eliminar carpeta y todo su contenido)
+del archivo.txt               &nbsp; (eliminar archivo)
+del /f /q archivo.txt         &nbsp; (/f fuerza, /q silencio)</code></pre>
+        </div>
+        <div class="tip">Siempre confirma que no estás borrando archivos importantes. <code>rmdir /s</code> pregunta
+            confirmación a menos que añadas <code>/q</code>.</div>
+    </section>
+
+    <section>
+        <h2>5. Copiar y mover archivos</h2>
+        <h3><code>copy</code></h3>
+        <div class="cmd">
+            <pre><code>copy archivo.txt D:\backup\archivo.txt</code></pre>
+        </div>
+        <div class="example">Copia archivos simples. Para carpetas y copias más robustas usa <code>xcopy</code> o
+            <code>robocopy</code>.</div>
+
+        <h3><code>xcopy</code> — copiar directorios</h3>
+        <div class="cmd">
+            <pre><code>xcopy carpeta_origen carpeta_destino /s /e /i</code></pre>
+        </div>
+        <div class="small">/s copia subdirectorios (excepto vacíos), /e incluye vacíos, /i asume destino como carpeta.
+        </div>
+
+        <h3><code>robocopy</code> — copia avanzada</h3>
+        <div class="cmd">
+            <pre><code>robocopy C:\origen D:\destino /MIR /Z /R:3 /W:5</code></pre>
+        </div>
+        <div class="small">/MIR sincroniza ( espejo ), /Z modo reiniciable, /R retry attempts, /W wait sec.</div>
+
+        <h3><code>move</code></h3>
+        <div class="cmd">
+            <pre><code>move archivo.txt D:\nueva_ubicacion\</code></pre>
+        </div>
+    </section>
+
+    <section>
+        <h2>6. Visualizar contenido y buscar texto</h2>
+        <h3><code>type archivo.txt</code></h3>
+        <div class="cmd">
+            <pre><code>type archivo.txt</code></pre>
+        </div>
+
+        <h3><code>find</code> — buscar texto dentro de archivos</h3>
+        <div class="cmd">
+            <pre><code>find "palabra" archivo.txt
+find /I "texto" *.log   &nbsp; (buscar sin distinguir mayúsculas)</code></pre>
+        </div>
+
+        <h3><code>findstr</code> — búsquedas más avanzadas con expresiones</h3>
+        <div class="cmd">
+            <pre><code>findstr /s /i /n "error" *.log</code></pre>
+        </div>
+    </section>
+
+    <section>
+        <h2>7. Comandos útiles de sistema y red</h2>
+        <div class="cmd">
+            <pre><code>ipconfig        &nbsp; (ver IPs y configuración de red)
+ipconfig /all    &nbsp; (detalles completos)
+ping 8.8.8.8     &nbsp; (comprobar conectividad)
+tracert ejemplo.com &nbsp; (rastrear ruta)
+netstat -ano     &nbsp; (puertos y conexiones)
+tasklist         &nbsp; (procesos activos)
+taskkill /PID 1234 /F  &nbsp; (matar proceso por PID)
+systeminfo       &nbsp; (información del sistema)</code></pre>
+        </div>
+        <div class="tip">Usa <code>tasklist | findstr nombre</code> para filtrar procesos por nombre.</div>
+    </section>
+
+    <section>
+        <h2>8. Permisos y atributos</h2>
+        <div class="cmd">
+            <pre><code>attrib +r archivo.txt    &nbsp; (solo lectura)
+attrib -r archivo.txt    &nbsp; (quitar solo lectura)
+icacls carpeta /grant Usuario:F &nbsp; (gestionar permisos NTFS)</code></pre>
+        </div>
+        <div class="small">Modificar permisos con <code>icacls</code> puede requerir privilegios de administrador.</div>
+    </section>
+
+    <section>
+        <h2>9. Comandos para mantenimiento</h2>
+        <div class="cmd">
+            <pre><code>chkdsk C: /f
+sfc /scannow    &nbsp; (Comprobador de archivos del sistema)
+dism /online /cleanup-image /restorehealth</code></pre>
+        </div>
+        <div class="tip">Ejecuta estos comandos con privilegios de administrador.</div>
+    </section>
+
+    <section>
+        <h2>10. Consejos prácticos y atajos</h2>
+        <ul>
+            <li><code>Tab</code> autocompleta nombres de archivos y carpetas.</li>
+            <li><code>F7</code> muestra historial de comandos (interfaz gráfica minimal).</li>
+            <li><code>doskey /history</code> muestra historial en texto.</li>
+            <li>Puedes arrastrar una carpeta desde el Explorador al CMD para pegar su ruta.</li>
+            <li>Redirecciona salidas a archivos: <code>comando &gt; salida.txt</code> o
+                <code>comando 2&gt;&amp;1 &gt; log.txt</code>.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Quiz: 7 preguntas</h2>
+        <p>Prueba tus conocimientos. Haz clic en "Mostrar respuesta" para ver la solución.</p>
+
+        <div class="quiz-item">
+            <strong>1.</strong> ¿Qué comando usas para listar archivos y subcarpetas del directorio actual?
+            <div><button onclick="toggle('a1')">Mostrar respuesta</button></div>
+            <div id="a1" class="answer"><strong>Respuesta:</strong> <code>dir</code></div>
+        </div>
+
+        <div class="quiz-item">
+            <strong>2.</strong> ¿Cómo creas un archivo vacío llamado <code>notas.txt</code> desde la consola?
+            <div><button onclick="toggle('a2')">Mostrar respuesta</button></div>
+            <div id="a2" class="answer"><strong>Respuesta:</strong> <code>type nul &gt; notas.txt</code> (también
+                <code>copy con notas.txt</code> y luego Ctrl+Z para escribir contenido).</div>
+        </div>
+
+        <div class="quiz-item">
+            <strong>3.</strong> ¿Qué comando sirve para cambiar de unidad y carpeta al mismo tiempo?
+            <div><button onclick="toggle('a3')">Mostrar respuesta</button></div>
+            <div id="a3" class="answer"><strong>Respuesta:</strong> <code>cd /d D:\ruta\carpeta</code></div>
+        </div>
+
+        <div class="quiz-item">
+            <strong>4.</strong> ¿Qué comando elimina una carpeta y todo su contenido sin pedir confirmación?
+            <div><button onclick="toggle('a4')">Mostrar respuesta</button></div>
+            <div id="a4" class="answer"><strong>Respuesta:</strong> <code>rmdir /s /q nombre_carpeta</code></div>
+        </div>
+
+        <div class="quiz-item">
+            <strong>5.</strong> Si quieres ver qué procesos están corriendo en el sistema, ¿qué comando usas?
+            <div><button onclick="toggle('a5')">Mostrar respuesta</button></div>
+            <div id="a5" class="answer"><strong>Respuesta:</strong> <code>tasklist</code></div>
+        </div>
+
+        <div class="quiz-item">
+            <strong>6.</strong> ¿Cómo comprobarías la conectividad hacia google DNS (8.8.8.8)?
+            <div><button onclick="toggle('a6')">Mostrar respuesta</button></div>
+            <div id="a6" class="answer"><strong>Respuesta:</strong> <code>ping 8.8.8.8</code></div>
+        </div>
+
+        <div class="quiz-item">
+            <strong>7.</strong> ¿Qué comando muestra la configuración IP (direcciones IPv4, gateways, DNS)?
+            <div><button onclick="toggle('a7')">Mostrar respuesta</button></div>
+            <div id="a7" class="answer"><strong>Respuesta:</strong> <code>ipconfig /all</code></div>
+        </div>
+
+    </section>
+
+    <footer>
+        <div>Creado como guía educativa — practica siempre en entornos seguros y evita comandos destructivos en carpetas
+            importantes.</div>
+        <div class="small">Si quieres que convierta esto en un PDF o que te agregue ejemplos prácticos para cada comando
+            (scripts .bat), dímelo y lo hago.</div>
+    </footer>
+
+    <script>
+        function toggle(id) {
+            const el = document.getElementById(id);
+            if (!el) return;
+            el.style.display = (el.style.display === 'block') ? 'none' : 'block';
+        }
+    </script>
+</body>
+
+</html>
