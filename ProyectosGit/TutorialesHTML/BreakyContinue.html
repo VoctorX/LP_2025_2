@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial Interactivo: Sentencias break y continue</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e0e5ec;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .tutorial-container {
+            background: #f0f1f6;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1), -10px -10px 20px rgba(255, 255, 255, 0.7);
+            width: 60%;
+        }
+
+        .title {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .tutorial-content {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            margin-top: 20px;
+            color: #4f5d75;
+        }
+
+        pre {
+            background-color: #f7f7f7;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+            font-family: 'Courier New', monospace;
+            color: #333;
+        }
+
+        .quiz-container {
+            background: #e0e5ec;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: inset 5px 5px 15px rgba(0, 0, 0, 0.2), inset -5px -5px 15px rgba(255, 255, 255, 0.3);
+        }
+
+        .quiz-question {
+            margin-bottom: 15px;
+        }
+
+        .quiz-question p {
+            font-size: 1.1rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .submit-btn {
+            background-color: #4f5d75;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #5a6f8b;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 1.1rem;
+            color: #4f5d75;
+        }
+    </style>
+</head>
+<body>
+    <div class="tutorial-container">
+        <h1 class="title">Tutorial: Sentencias `break` y `continue`</h1>
+
+        <div class="tutorial-content">
+            <p>En los lenguajes de programación, las sentencias `break` y `continue` son muy útiles para controlar el flujo de ejecución de los bucles.</p>
+            
+            <h2>Sentencia `break`</h2>
+            <p>La sentencia `break` se utiliza para salir de un bucle antes de que termine su ejecución normal.</p>
+            <pre><code>
+for (let i = 0; i < 10; i++) {
+    if (i === 5) {
+        break; // Sale del bucle cuando i es igual a 5
+    }
+    console.log(i);
+}
+            </code></pre>
+
+            <h2>Sentencia `continue`</h2>
+            <p>La sentencia `continue` se utiliza para saltarse la iteración actual de un bucle y continuar con la siguiente.</p>
+            <pre><code>
+for (let i = 0; i < 10; i++) {
+    if (i === 5) {
+        continue; // Salta la iteración cuando i es igual a 5
+    }
+    console.log(i);
+}
+            </code></pre>
+
+            <p>Ahora, responde el siguiente quiz para reforzar lo aprendido:</p>
+        </div>
+
+        <div class="quiz-container">
+            <h3>Quiz Interactivo</h3>
+            <form id="quiz-form">
+                <div class="quiz-question">
+                    <p>¿Cuál es el propósito de la sentencia `break`?</p>
+                    <label><input type="radio" name="question1" value="a"> A) Salir de un bucle</label>
+                    <label><input type="radio" name="question1" value="b"> B) Saltar a la siguiente iteración</label>
+                    <label><input type="radio" name="question1" value="c"> C) Detener la ejecución del código</label>
+                </div>
+
+                <div class="quiz-question">
+                    <p>¿Qué sucede cuando se ejecuta la sentencia `continue` dentro de un bucle?</p>
+                    <label><input type="radio" name="question2" value="a"> A) Se sale del bucle</label>
+                    <label><input type="radio" name="question2" value="b"> B) Se omite la iteración actual y se pasa a la siguiente</label>
+                    <label><input type="radio" name="question2" value="c"> C) Se termina el programa</label>
+                </div>
+
+                <div class="quiz-question">
+                    <p>¿En qué tipo de estructuras de control se puede usar `break` y `continue`?</p>
+                    <label><input type="radio" name="question3" value="a"> A) Solo en bucles</label>
+                    <label><input type="radio" name="question3" value="b"> B) En cualquier parte del código</label>
+                    <label><input type="radio" name="question3" value="c"> C) Solo en estructuras `if`</label>
+                </div>
+
+                <button type="submit" class="submit-btn">Enviar Respuestas</button>
+            </form>
+
+            <div id="result" class="result"></div>
+        </div>
+    </div>
+
+    <script>
+        // Lógica para el Quiz
+        document.getElementById('quiz-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            let score = 0;
+            let resultMessage = "";
+
+            // Respuesta 1
+            const answer1 = document.querySelector('input[name="question1"]:checked');
+            if (answer1 && answer1.value === 'a') {
+                score++;
+            }
+
+            // Respuesta 2
+            const answer2 = document.querySelector('input[name="question2"]:checked');
+            if (answer2 && answer2.value === 'b') {
+                score++;
+            }
+
+            // Respuesta 3
+            const answer3 = document.querySelector('input[name="question3"]:checked');
+            if (answer3 && answer3.value === 'a') {
+                score++;
+            }
+
+            // Mostrar resultados
+            if (score === 3) {
+                resultMessage = "¡Excelente! Has respondido todas las preguntas correctamente.";
+            } else {
+                resultMessage = `Tienes ${score} respuestas correctas. Revisa las explicaciones para mejorar.`;
+            }
+
+            document.getElementById('result').innerHTML = resultMessage;
+        });
+    </script>
+</body>
+</html>
