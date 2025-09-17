@@ -4,7 +4,6 @@ from fpdf import FPDF
 import os
 import webbrowser
 
-
 class HojaDeVidaApp:
     def __init__(self, root):
         self.root = root
@@ -30,8 +29,7 @@ class HojaDeVidaApp:
         archivo_menu = tk.Menu(menubar, tearoff=0)
         archivo_menu.add_command(label="Nuevo", command=self.nuevo)
         archivo_menu.add_command(label="Guardar", command=self.guardar)
-        archivo_menu.add_command(label="Exportar PDF",
-                                 command=self.exportar_pdf)
+        archivo_menu.add_command(label="Exportar PDF", command=self.exportar_pdf)
         archivo_menu.add_separator()
         archivo_menu.add_command(label="Salir", command=self.root.quit)
         menubar.add_cascade(label="Archivo", menu=archivo_menu)
