@@ -76,6 +76,16 @@ El notebook está organizado en las siguientes secciones:
 - Matrices de correlación
 - Heatmaps
 
+## 🎯 Objetivos de Aprendizaje
+
+Este notebook me permitió:
+- ✅ Dominar conceptos fundamentales de Python
+- ✅ Trabajar con estructuras de datos complejas
+- ✅ Realizar análisis exploratorio de datos
+- ✅ Crear visualizaciones efectivas
+- ✅ Aplicar técnicas de ciencia de datos en casos prácticos
+
+
 ## 🛠️ Requisitos y Dependencias
 
 Para ejecutar este notebook, necesitas tener instaladas las siguientes bibliotecas de Python:
@@ -95,79 +105,54 @@ pip install numpy pandas matplotlib seaborn jupyter openpyxl
 
 1. **Clonar el repositorio:**
 ```bash
-git clone [URL-de-tu-repositorio]
-cd [nombre-del-repositorio]
+git clone [https://github.com/VoctorX/Jupyter.git]
+cd [Jupyter]
 ```
 
-2. **Instalar las dependencias:**
-```bash
-pip install -r requirements.txt
-```
-
-3. **Iniciar Jupyter Notebook:**
-```bash
-jupyter notebook
-```
-
-4. **Abrir el archivo:**
-- En tu navegador, navega hasta `Python- DataScience.ipynb`
+2. **Abrir el archivo:**
+- En tu navegador, abre `Python- DataScience.ipynb` en un colab desde Drive
 - Haz clic en el archivo para abrirlo
 
-5. **Ejecutar las celdas:**
+3. **Ejecutar las celdas:**
 - Puedes ejecutar cada celda individualmente con `Shift + Enter`
 - O ejecutar todas las celdas desde el menú: `Cell > Run All`
 
-## 📁 Estructura del Repositorio
+## Construido con 🛠️
 
-```
-.
-├── Python- DataScience.ipynb    # Notebook principal
-├── README.md                     # Este archivo
-├── requirements.txt              # Dependencias del proyecto
-└── DB/                          # Carpeta con archivos de datos (si aplica)
-    └── futbolistas.xlsx         # Dataset de ejemplo
-```
+_Herramientas y lenguajes utilizados en los proyectos de este repositorio:_
 
-## 📊 Dataset Utilizado
-
-El notebook incluye un dataset de ejemplo sobre futbolistas con las siguientes características:
-- Información personal (nombre, edad, fecha de nacimiento)
-- Métricas de rendimiento (horas de entrenamiento, juegos)
-- Características físicas (altura, precio)
-- Hábitos (gimnasio, fuma)
-- Liga de pertenencia
-
-## 🎯 Objetivos de Aprendizaje
-
-Este notebook me permitió:
-- ✅ Dominar conceptos fundamentales de Python
-- ✅ Trabajar con estructuras de datos complejas
-- ✅ Realizar análisis exploratorio de datos
-- ✅ Crear visualizaciones efectivas
-- ✅ Aplicar técnicas de ciencia de datos en casos prácticos
-
-## 👤 Información de Contacto
-
-**Autor:** [Tu Nombre]  
-**Correo:** [tu-correo@ejemplo.com]  
-**GitHub:** [tu-usuario-github]  
-**Fecha:** Octubre 2025  
-**Curso:** Python para Ciencia de Datos
-
-## 📝 Notas Adicionales
-
-- Algunas secciones al final del notebook están en desarrollo y se completarán próximamente
-- El notebook está diseñado para ser educativo y seguir una progresión lógica de conceptos
-- Se recomienda ejecutar las celdas en orden para evitar errores de dependencias
-
-## 🤝 Contribuciones
-
-Este es un proyecto educativo personal. Sin embargo, si encuentras algún error o tienes sugerencias, ¡no dudes en abrir un issue!
-
-## 📜 Licencia
-
-Este proyecto es de uso educativo y está disponible bajo la licencia MIT.
+* [Git](https://git-scm.com/) - Control de versiones ![GitHub](https://img.shields.io/badge/GitHub-actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
+* [Visual Studio Code](https://code.visualstudio.com/) - Editor de código
+* [Python](https://www.python.org/) - Lenguaje de programación ![Python](https://img.shields.io/badge/Python-3.13-3776AB?style=for-the-badge&logo=python&logoColor=white)
 
 ---
 
-*Desarrollado como parte del aprendizaje en Python para Ciencia de Datos* 🐍📊
+## 👤 Información de Contacto
+
+**Autor:** [Victor Cordoba]  
+**Correo:** [cordobavictorml@gmail.com]  
+**GitHub:** [VoctorX]  
+**Fecha:** Octubre 2025  
+**Curso:** Lenguajes de Programacion
+
+## 📝 Notas Adicionales
+
+- El notebook está diseñado para ser educativo y seguir una progresión lógica de conceptos
+- Se recomienda ejecutar las celdas en orden para evitar errores de dependencias
+
+## Autor ✒️
+
+* **Victor Cordoba** - *Creador y desarrollador principal* - [VoctorX](https://github.com/VoctorX)
+
+## Licencia 📄
+
+Este proyecto está bajo la Licencia MIT - mira el archivo [LICENSE.md](LICENSE.md) para detalles
+
+## Apoyame 🎁
+
+* Comenta a otros sobre este proyecto 📢
+* Da las gracias públicamente 🤓.
+* Dona con cripto a esta dirección: `0x95d80d2e959099458EDCfd3E14391A44F532177a`
+* Dona con Paypal: [![Donar con PayPal](https://img.shields.io/badge/Donar%20con-PayPal-00457C?logo=paypal&logoColor=white)](https://www.paypal.com/donate/?business=cordobavictorml@gmail.com&no_recurring=0&currency_code=USD) 
+
+---
