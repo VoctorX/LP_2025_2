@@ -53,5 +53,3 @@ Este proyecto está bajo la Licencia MIT - mira el archivo [LICENSE.md](LICENSE.
 * Da las gracias públicamente 🤓.
 * Dona con cripto a esta dirección: `0x95d80d2e959099458EDCfd3E14391A44F532177a`
 * Dona con Paypal: [![Donar con PayPal](https://img.shields.io/badge/Donar%20con-PayPal-00457C?logo=paypal&logoColor=white)](https://www.paypal.com/donate/?business=cordobavictorml@gmail.com&no_recurring=0&currency_code=USD) 
-
----
