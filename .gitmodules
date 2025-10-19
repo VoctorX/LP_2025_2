@@ -13,5 +13,7 @@
 [submodule "Taller1"]
 	path = ProyectosGit/Taller1
 	url = https://github.com/VoctorX/Taller-Seguimiento-1.git
-
+[submodule "SOLID"]
+	path = ProyectosGit/SOLID
+	url = https://github.com/VoctorX/SOLID.git
 
