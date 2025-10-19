@@ -10,5 +10,8 @@
 [submodule "Jupyter"]
 	path = ProyectosGit/Jupyter
 	url = https://github.com/VoctorX/Jupyter.git
+[submodule "Taller1"]
+	path = ProyectosGit/Taller1
+	url = https://github.com/VoctorX/Taller-Seguimiento-1.git
 
 
