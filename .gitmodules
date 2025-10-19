@@ -17,3 +17,6 @@
 	path = ProyectosGit/SOLID
 	url = https://github.com/VoctorX/SOLID.git
 
+[submodule "ProyectosGit/SOLID"]
+	path = ProyectosGit/SOLID
+	url = https://github.com/VoctorX/SOLID.git
