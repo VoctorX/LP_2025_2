@@ -91,7 +91,7 @@ Este notebook me permitió:
 Para ejecutar este notebook, necesitas tener instaladas las siguientes bibliotecas de Python:
 
 ```bash
-pip install numpy pandas matplotlib seaborn jupyter openpyxl
+pip install numpy pandas matplotlib seaborn jupyter
 ```
 
 ### Bibliotecas utilizadas:
@@ -106,7 +106,7 @@ pip install numpy pandas matplotlib seaborn jupyter openpyxl
 1. **Clonar el repositorio:**
 ```bash
 git clone [https://github.com/VoctorX/Jupyter.git]
-cd [Jupyter]
+cd Jupyter
 ```
 
 2. **Abrir el archivo:**
