@@ -1,14 +1,14 @@
 [submodule "phpTest"]
-	path = phpTest
+	path = ProyectosGit/phpTest
 	url = https://github.com/VoctorX/phpTest.git
 [submodule "Parcial1"]
-	path = Parcial1
+	path = ProyectosGit/Parcial1
 	url = https://github.com/VoctorX/Parcial1.git
 [submodule "Impresora"]
-	path = Impresora
+	path = ProyectosGit/Impresora
 	url = https://github.com/VoctorX/Impresora.git
 [submodule "Jupyter"]
-	path = Jupyter
+	path = ProyectosGit/Jupyter
 	url = https://github.com/VoctorX/Jupyter.git
 
 
