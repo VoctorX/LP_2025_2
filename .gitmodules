@@ -13,3 +13,6 @@
 [submodule "Taller1"]
 	path = ProyectosGit/Taller1
 	url = https://github.com/VoctorX/Taller-Seguimiento-1.git
+[submodule "VibeCoding"]
+	path = ProyectosGit/VibeCoding
+	url = https://github.com/VoctorX/VibeCoding.git
