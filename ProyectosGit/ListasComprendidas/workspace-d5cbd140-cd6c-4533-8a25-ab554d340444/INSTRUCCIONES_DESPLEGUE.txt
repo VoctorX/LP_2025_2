@@ -1,0 +1,54 @@
+===================================
+INSTRUCCIONES PARA DESPLEGAR EL PROYECTO
+===================================
+
+ARCHIVO: python-list-comprehensions-website.tar.gz
+TAMAÑO: 48,525 bytes
+
+CONTENIDO:
+- Sitio web educativo sobre listas comprendidas en Python
+- Desarrollado con Next.js 15, TypeScript y Tailwind CSS
+- Incluye quizzes interactivos y ejemplos prácticos
+- Estética azul con amarillo
+- Autor: Victor Cordoba
+
+REQUISITOS PREVIOS:
+1. Node.js (versión 18 o superior)
+2. npm o yarn
+
+PASOS PARA DESPLEGAR:
+
+1. Descomprimir el archivo:
+   tar -xzf python-list-comprehensions-website.tar.gz
+   cd [directorio_extraido]
+
+2. Instalar dependencias:
+   npm install
+
+3. Iniciar el servidor de desarrollo:
+   npm run dev
+
+4. Acceder al sitio:
+   http://localhost:3000
+
+PARA DESPLEGUE EN PRODUCCIÓN:
+
+1. Construir el proyecto:
+   npm run build
+
+2. Iniciar servidor de producción:
+   npm start
+
+CARACTERÍSTICAS DEL PROYECTO:
+- Página educativa interactiva sobre listas comprendidas en Python
+- Quizzes funcionales con retroalimentación inmediata
+- Ejemplos prácticos con código ejecutable
+- Diseño responsivo (móvil y escritorio)
+- Estética azul con amarillo
+- Contenido teórico ampliado
+- Autoría atribuida a Victor Cordoba
+
+NOTAS:
+- El proyecto excluye node_modules, .git, y archivos de compilación
+- Configurado para desarrollo local con servidor en puerto 3000
+- Incluye todas las dependencias necesarias en package.json
