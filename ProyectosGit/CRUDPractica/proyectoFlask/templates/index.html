@@ -1,0 +1,240 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if is_login %}
+<h2>Iniciar Sesión</h2>
+<p>Prueba: Harol (Profesor) o Ana Perez (Estudiante). Contraseña: 123</p>
+<form method="POST" style="max-width: 350px;">
+    <label for="nombre">Usuario:</label>
+    <input type="text" id="nombre" name="nombre" required>
+
+    <label for="password">Contraseña:</label>
+    <input type="password" id="password" name="password" required>
+
+    <button type="submit">Entrar</button>
+</form>
+
+{% elif is_profesor %}
+<h2>Panel del Profesor (Harol) 🧑‍🏫</h2>
+
+<h3>1. Gestión de Notas</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Estudiante</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for estudiante in estudiantes %}
+        <tr>
+            <td>{{ estudiante.nombre }}</td>
+            <td>
+                <a href="{{ url_for('cargar_nota') }}">Cargar Nota</a> |
+                <a href="{{ url_for('ver_notas_estudiante', estudiante_id=estudiante.id) }}">Ver Notas</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<h3>2. Toma de Asistencia</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Materia</th>
+            <th>Acción</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for materia in materias %}
+        <tr>
+            <td>{{ materia.nombre }}</td>
+            <td>
+                <a href="{{ url_for('tomar_asistencia', materia_id=materia.id) }}">Tomar Asistencia</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% elif is_cargar_nota %}
+<h2>Cargar Nueva Nota 📝</h2>
+<form method="POST" style="max-width: 400px;">
+    <label for="estudiante_id">Estudiante:</label>
+    <select id="estudiante_id" name="estudiante_id" required>
+        {% for estudiante in estudiantes %}
+        <option value="{{ estudiante.id }}">{{ estudiante.nombre }}</option>
+        {% endfor %}
+    </select>
+
+    <label for="materia_id">Materia:</label>
+    <select id="materia_id" name="materia_id" required>
+        {% for materia in materias %}
+        <option value="{{ materia.id }}">{{ materia.nombre }}</option>
+        {% endfor %}
+    </select>
+
+    <label for="valor">Valor de la Nota (0.0 a 5.0):</label>
+    <input type="number" step="0.1" min="0.0" max="5.0" id="valor" name="valor" required>
+
+    <label for="descripcion">Descripción / Tarea:</label>
+    <input type="text" id="descripcion" name="descripcion" required>
+
+    <button type="submit" style="background-color: green;">Guardar Nota</button>
+    <a href="{{ url_for('dashboard_profesor') }}" style="margin-left: 10px; color: #dc3545;">Cancelar</a>
+</form>
+
+{% elif is_tomar_asistencia %}
+<h2>Tomar Asistencia: {{ materia.nombre }} 📅</h2>
+<h3>Fecha: {{ fecha }}</h3>
+
+<form method="POST">
+    <table>
+        <thead>
+            <tr>
+                <th>Estudiante</th>
+                <th style="text-align: center;">Presente</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for estudiante in estudiantes %}
+            <tr>
+                <td>{{ estudiante.nombre }}</td>
+                <td style="text-align: center;">
+                    <input type="checkbox" name="asistencia_{{ estudiante.id }}" {% if
+                        asistencias_hoy.get(estudiante.id) %}checked{% endif %}>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <button type="submit" style="background-color: darkblue;">Registrar Asistencia</button>
+    <a href="{{ url_for('dashboard_profesor') }}" style="margin-left: 10px; color: #dc3545;">Cancelar</a>
+</form>
+
+{% elif is_ver_notas %}
+<h2>Notas de: {{ estudiante.nombre }} 📄</h2>
+<a href="{{ url_for('dashboard_profesor') }}">
+    < Volver al Panel</a>
+        {% if notas %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Materia</th>
+                    <th>Descripción / Tarea</th>
+                    <th>Nota</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for nota in notas %}
+                <tr>
+                    <td>{{ nota.materia.nombre }}</td>
+                    <td>{{ nota.descripcion }}</td>
+                    <td style="font-weight: bold; color: {% if nota.valor >= 3.0 %}green{% else %}red{% endif %};">{{
+                        nota.valor | round(1) }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <p>Aún no hay notas cargadas para este estudiante.</p>
+        {% endif %}
+
+
+        {% elif is_estudiante %}
+        <h2>Panel del Estudiante: {{ estudiante.nombre }} 👩‍🎓</h2>
+        <ul style="list-style-type: none; padding: 0;">
+            <li style="margin-bottom: 10px;"><a href="{{ url_for('mis_notas') }}">⭐ Ver Mis Notas y Promedios</a></li>
+            <li><a href="{{ url_for('mi_asistencia') }}">✅ Ver Mi Historial de Asistencia</a></li>
+        </ul>
+
+        {% elif is_mis_notas %}
+        <h2>Mis Notas y Promedios 🌟</h2>
+        <a href="{{ url_for('dashboard_estudiante') }}">
+            < Volver al Panel</a>
+                <h3>Promedio por Materia</h3>
+                {% if notas_por_materia %}
+                <table style="width: 50%;">
+                    <thead>
+                        <tr>
+                            <th>Materia</th>
+                            <th>Promedio Final</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for item in notas_por_materia %}
+                        <tr>
+                            <td>{{ item.materia }}</td>
+                            <td
+                                style="font-weight: bold; color: {% if item.promedio >= 3.0 %}green{% else %}red{% endif %};">
+                                {{ item.promedio | round(2) }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                {% else %}
+                <p>Aún no tienes promedios registrados.</p>
+                {% endif %}
+
+                <h3>Notas Detalladas</h3>
+                {% if notas_detalladas %}
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Materia</th>
+                            <th>Descripción</th>
+                            <th>Nota</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for nota in notas_detalladas %}
+                        <tr>
+                            <td>{{ nota.materia.nombre }}</td>
+                            <td>{{ nota.descripcion }}</td>
+                            <td style="font-weight: bold;">{{ nota.valor | round(1) }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                {% else %}
+                <p>Aún no hay notas detalladas registradas.</p>
+                {% endif %}
+
+                {% elif is_mi_asistencia %}
+                <h2>Mi Historial de Asistencia ✅</h2>
+                <a href="{{ url_for('dashboard_estudiante') }}">
+                    < Volver al Panel</a>
+
+                        {% if asistencias %}
+                        <table style="width: 60%;">
+                            <thead>
+                                <tr>
+                                    <th>Materia</th>
+                                    <th>Fecha</th>
+                                    <th>Estado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for asistencia in asistencias %}
+                                <tr>
+                                    <td>{{ asistencia.materia.nombre }}</td>
+                                    <td>{{ asistencia.fecha }}</td>
+                                    <td
+                                        style="color: {% if asistencia.presente %}green{% else %}red{% endif %}; font-weight: bold;">
+                                        {% if asistencia.presente %}Presente{% else %}Ausente{% endif %}
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                        {% else %}
+                        <p>No se ha registrado asistencia para ti aún.</p>
+                        {% endif %}
+
+                        {% else %}
+                        <p>Página no encontrada o error de ruta.</p>
+                        {% endif %}
+
+                        {% endblock %}
